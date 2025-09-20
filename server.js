@@ -16,7 +16,7 @@ import reviewRoutes from './routes/Review.js'
 import wishlistRoutes from './routes/Wishlist.js'
 import contactRoutes from "./routes/contact.js";
 import { connectToDB } from "./database/db.js";
-
+import payfastRoutes from "./routes/payfast.js";
 //PORT
 
 const port = process.env.PORT || 3000;
@@ -53,7 +53,7 @@ server.use('/address',addressRoutes)
 server.use('/reviews',reviewRoutes)
 server.use('/wishlist',wishlistRoutes)
 server.use("/api/contact", contactRoutes);
-
+server.use("/payfast", payfastRoutes);
 //Health check
 server.get("/",(req,res)=>{
     res.status(200).json({message:'running'})
