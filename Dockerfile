@@ -1,18 +1,18 @@
-# Use Node.js LTS version
+# Use Node.js image
 FROM node:18
 
-# Set working directory inside the container
-WORKDIR /app
+# Create app directory
+WORKDIR /usr/src/app
 
-# Copy package.json and install dependencies
+# Copy package.json and install deps
 COPY package*.json ./
 RUN npm install --production
 
-# Copy all project files
+# Copy rest of the code
 COPY . .
 
-# Expose the port (use the same as your .env PORT)
+# Expose port 3000
 EXPOSE 3000
 
-# Start the app
+# Start app
 CMD ["npm", "start"]
