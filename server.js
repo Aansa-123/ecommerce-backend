@@ -14,7 +14,7 @@ import userRoutes from './routes/User.js'
 import addressRoutes from './routes/Address.js'
 import reviewRoutes from './routes/Review.js'
 import wishlistRoutes from './routes/Wishlist.js'
-import contactRoutes from "./routes/contact.js";
+import contactRoutes from "./routes/Contact.js";
 import { connectToDB } from "./database/db.js";
 import payfastRoutes from "./routes/payfast.js";
 //PORT
