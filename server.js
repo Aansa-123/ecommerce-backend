@@ -61,4 +61,7 @@ server.get("/",(req,res)=>{
 
 server.listen(port,()=>{
     console.log(`server [STARTED] ~ http://localhost:${port}`);
+    console.log(`🚀 API Server is running on port ${port}`);
+    console.log(`📅 Started at: ${new Date().toISOString()}`);
+    console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 })
