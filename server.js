@@ -13,7 +13,7 @@ import categoryRoutes from './routes/Category.js'
 import userRoutes from './routes/User.js'
 import addressRoutes from './routes/Address.js'
 import reviewRoutes from './routes/Review.js'
-import wishlistRoutes from './routes/Wishlist.js'
+import wishlistRoutes from './routes/WishList.js'
 import contactRoutes from "./routes/Contact.js";
 import { connectToDB } from "./database/db.js";
 import payfastRoutes from "./routes/payfast.js";
