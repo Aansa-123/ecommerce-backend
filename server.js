@@ -13,7 +13,7 @@ import categoryRoutes from './routes/Category.js'
 import userRoutes from './routes/User.js'
 import addressRoutes from './routes/Address.js'
 import reviewRoutes from './routes/Review.js'
-import wishlistRoutes from './routes/WishList.js'
+import wishlistRoutes from './routes/Wishlist.js'
 import contactRoutes from "./routes/Contact.js";
 import { connectToDB } from "./database/db.js";
 import payfastRoutes from "./routes/payfast.js";
@@ -55,8 +55,12 @@ server.use('/wishlist',wishlistRoutes)
 server.use("/api/contact", contactRoutes);
 server.use("/payfast", payfastRoutes);
 //Health check
-server.get("/",(req,res)=>{
+server.get("/test",(req,res)=>{
     res.status(200).json({message:'running'})
+})
+
+server.get("/",(req,res)=>{
+    res.status(200).json({message:'Ecommerce Backend is Running '})
 })
 
 server.listen(port,()=>{
